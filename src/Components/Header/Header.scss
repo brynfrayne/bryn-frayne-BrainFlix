@@ -1,0 +1,44 @@
+@use "../Partials/Colors.scss" as*;
+
+.header {
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   &__logo {
+       margin:1rem 0;
+       width:50%;
+   }
+    &__avatar {
+        border-radius: 50%;
+        max-height: 36px;
+        height:12vw;
+        max-width: 36px;
+        width:12vw;
+        background-position: center;
+        background-size: cover;
+        margin-left: 1rem;
+    }
+    &__search-avatar  {
+        display: flex;
+        width: 100%;
+        margin:0 1rem;
+        padding:0 1rem;
+    }
+    &__button {
+        margin:1rem;
+        width:90%;
+        padding: 1rem;
+        background-color: $BrainFlix-Blue;
+        color:$White;
+        border-radius: 4px;
+        border:none;
+        display: flex;
+        align-items: center;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+    &__button-icon {
+        position: relative;
+    }
+}

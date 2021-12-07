@@ -1,0 +1,24 @@
+@use "../Partials/Colors.scss" as*;
+
+.button-container {
+    display: flex;
+    background-color: $BrainFlix-Blue;
+    margin:1rem;
+    width:90%;
+    padding:0 1rem;
+    color:$White;
+    border-radius: 4px;
+   
+}
+.button {
+    width:90%;
+    padding: 1rem;
+    background-color: $BrainFlix-Blue;
+    color:$White;
+    border:none;
+    font-size: .75rem;
+    font-weight: 700;
+}
+.button-icon {
+    position: relative;
+}

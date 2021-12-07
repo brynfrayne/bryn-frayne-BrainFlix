@@ -1,0 +1,24 @@
+@use "../Partials/Colors.scss" as*;
+
+.search {
+    position:relative;
+    
+    min-height:36px;
+    
+    box-shadow: 0;
+    flex-grow: 1;
+
+    &__input {
+        padding: .75rem;
+        padding-left:2rem;
+        width:100%;
+        border: 1px solid $Mercury;
+        border-radius: 4px;
+    }
+
+    &__svg {
+        left:.5rem;
+        position:absolute;
+        top:33%;
+    }
+}
