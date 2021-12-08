@@ -1,44 +1,71 @@
 @use "../Partials/Colors.scss" as*;
+@use "../Partials/Mixins.scss" as*;
 
 .header {
     display: flex;
    flex-direction: column;
    align-items: center;
+   @include tablet {
+       flex-direction: row;
+       margin:2rem;
+   }
+   
 
    &__logo {
        margin:1rem 0;
        width:50%;
+       max-width: 120px;
+       max-height: 25px;
+       @include tablet {
+           width:75%;
+           margin-right:2rem;
+       }
+       @include desktop {
+           margin:0 2rem;
+        }
    }
-    &__avatar {
-        border-radius: 50%;
-        max-height: 36px;
-        height:12vw;
-        max-width: 36px;
-        width:12vw;
+    &__avatar-left {
+        background-image: url("../../Assets/Images/Mohan-muruge.jpg");
         background-position: center;
         background-size: cover;
+        border-radius: 50%;
+        height:12vw;
+        max-height: 36px;
+        width:12vw;
+        max-width: 36px;
         margin-left: 1rem;
+        @include tablet {
+        display: none;
     }
-    &__search-avatar  {
+}
+    &__avatar-right {
+        display: none;
+        @include tablet {
+        display: block;
+        background-image: url("../../Assets/Images/Mohan-muruge.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        height:12vw;
+        max-height: 36px;
+        width:12vw;
+        max-width: 36px;
+        margin-left: 1rem;
+        }
+        @include desktop {
+            margin:2rem;
+        
+        }
+    }
+    
+    &__search-avatar-box  {
         display: flex;
         width: 100%;
         margin:0 1rem;
         padding:0 1rem;
+        @include desktop {
+            justify-content: flex-end;
+        }
     }
-    &__button {
-        margin:1rem;
-        width:90%;
-        padding: 1rem;
-        background-color: $BrainFlix-Blue;
-        color:$White;
-        border-radius: 4px;
-        border:none;
-        display: flex;
-        align-items: center;
-        font-size: .75rem;
-        font-weight: 700;
-    }
-    &__button-icon {
-        position: relative;
-    }
+   
 }

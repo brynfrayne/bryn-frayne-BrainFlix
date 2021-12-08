@@ -1,12 +1,14 @@
 @use "../Partials/Colors.scss" as*;
+@use "../Partials/Mixins.scss" as*;
 
 .search {
     position:relative;
-    
     min-height:36px;
-    
     box-shadow: 0;
     flex-grow: 1;
+    @include desktop {
+        flex-grow: 0;
+    }
 
     &__input {
         padding: .75rem;

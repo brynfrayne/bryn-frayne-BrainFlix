@@ -1,4 +1,6 @@
 @use "../Partials/Colors.scss" as*;
+@use "../Partials/Mixins.scss" as*;
+
 
 .button-container {
     display: flex;
@@ -8,6 +10,12 @@
     padding:0 1rem;
     color:$White;
     border-radius: 4px;
+    @include tablet {
+        width:65%;
+    }
+    @include desktop {
+        width:33%;
+    }
    
 }
 .button {
