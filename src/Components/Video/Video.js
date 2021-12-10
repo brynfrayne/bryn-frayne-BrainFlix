@@ -5,7 +5,7 @@ import "./Video.scss"
 export default function Video(props) {
     return (
         <div>
-            <video className="video" controls>{props.videoImage}</video>
+            <video poster={props.videoImage} className="video" controls></video>
         </div>
     )
 }

@@ -1,0 +1,20 @@
+.video-card {
+    &__button {
+        width:fit-content;
+        border: none;
+        cursor:pointer;
+        display: flex;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+    }
+    &__thumbnail {
+      height:50px;
+      width: 80px;  
+      border-radius: .25rem;
+      margin:.5rem;
+    }
+    // &__text {
+
+    // }
+}
