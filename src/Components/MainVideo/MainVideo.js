@@ -27,6 +27,7 @@ export default class MainVideo extends Component {
    };
    
     render(){
+    const filteredVideoList = this.state.videoDetails.filter((video) => video.id !== this.state.videos.id)
     return (
         <div>
             <Video videoImage={this.state.videos.image}/>
@@ -36,7 +37,7 @@ export default class MainVideo extends Component {
             <VideoCommentCounter commentCounter={this.state.videos.comments.length}/>
             {/* Comment Section */}
             <Comments commentsArray={this.state.videos.comments}/>
-            <VideoList videos={this.state.videoDetails} selectVideo={this.selectVideo}/>
+            <VideoList videos={filteredVideoList} selectVideo={this.selectVideo}/>
         </div>
     )
 }}

@@ -7,7 +7,7 @@ export default function Comments(props) {
         <div>
             <CommentInputForm />
             {props.commentsArray.map((comment) => (
-               <CommentCard name={comment.name} comment={comment.comment} likes={comment.likes}/> 
+               <CommentCard key={comment.id} name={comment.name} comment={comment.comment} /> 
             ))}
         </div>
     )

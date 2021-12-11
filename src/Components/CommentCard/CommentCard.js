@@ -1,19 +1,21 @@
 import React from 'react'
+import "./CommentCard.scss";
 
-export default function CommentCard({name, comment, likes}) {
+export default function CommentCard({name, comment}) {
     return (
-        <div>
-             <div className="avatar"></div>
+        <div className="comment-card">
+             <div className="comment-card__avatar"></div>
 
 
-            <div>
-                <div>
-                    <p>{name}</p>
-                    <p>08/09/2021</p>
+            <div className="comment-card__text-box">
+                <div className="comment-card__title-box">
+                    <p className="comment-card__name">{name}</p>
+                    {/* MAke sure to set appropriate date!!!! */}
+                    <p className="comment-card__date">08/09/2021</p>
                 </div>
 
-                <div>
-                    <p>{comment}</p>
+                <div className="comment-card__comment-box">
+                    <p className="comment-card__comment">{comment}</p>
                 </div>
             </div>
         </div>
