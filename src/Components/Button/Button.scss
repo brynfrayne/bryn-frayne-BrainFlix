@@ -1,12 +1,12 @@
-@use "../Partials/Colors.scss" as*;
-@use "../Partials/Mixins.scss" as*;
+@use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 
 .button-container {
     display: flex;
     background-color: $BrainFlix-Blue;
-    margin:1rem;
-    width:90%;
+    margin:1rem 0;
+    width:100%;
     padding:0 1rem;
     color:$White;
     border-radius: 4px;
@@ -16,7 +16,10 @@
     @include desktop {
         width:33%;
     }
-   
+    &:hover {
+        background-color: $BrainFlix-DarkBlue;
+        cursor: pointer;
+   }
 }
 .button {
     width:90%;
@@ -24,9 +27,14 @@
     background-color: $BrainFlix-Blue;
     color:$White;
     border:none;
-    font-size: .75rem;
+    font-size: .875rem;
     font-weight: 700;
+    &:hover {
+        background-color: $BrainFlix-DarkBlue;
+        cursor: pointer;
+    }
 }
+
 .button-icon {
     position: relative;
 }

@@ -1,14 +1,13 @@
-import UploadButton from "../../Assets/Icons/upload.svg";
 import "../Button/Button.scss";
 
-function Button() {
+function Button({icon,buttonText}) {
     return (
         <div className="button-container">
-            <img className="button-icon" src={UploadButton} alt=""/>
-            <button className="button">UPLOAD</button>
+            <img className="button-icon" src={icon} alt=""/>
+            <button className="button">{buttonText}</button>
         </div>  
         
     )
 }
-
 export default Button;
+

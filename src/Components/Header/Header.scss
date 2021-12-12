@@ -1,10 +1,13 @@
-@use "../Partials/Colors.scss" as*;
-@use "../Partials/Mixins.scss" as*;
+
+@use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 .header {
     display: flex;
    flex-direction: column;
    align-items: center;
+   margin: 1rem;
+   margin-top:0;
    @include tablet {
        flex-direction: row;
        margin:2rem;
@@ -60,9 +63,10 @@
     
     &__search-avatar-box  {
         display: flex;
-        width: 95%;
-        margin:0 1rem;
-        padding:0 1rem;
+        width: 100%;
+        justify-content: space-between;
+        // margin:0 1rem;
+        // padding:0 .5rem;
         @include desktop {
             justify-content: flex-end;
         }

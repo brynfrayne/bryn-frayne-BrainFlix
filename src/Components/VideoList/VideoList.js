@@ -1,12 +1,13 @@
 import React from 'react'
-import VideoCard from '../VideoCard/VideoCard'
+import VideoCard from '../VideoCard/VideoCard';
+import "./VideoList.scss";
 
 export default function VideoList({videos, selectVideo}) {
     return (
-        <div>
-            <p>NEXT VIDEOS</p>
+        <div className="video-list">
+            <p className="video-list__subtitle">NEXT VIDEOS</p>
             {videos.map((video) => (
-                <VideoCard selectVideo={selectVideo} id={video.id} title={video.title} thumbnail={video.image} channel={video.channel}/>
+                <VideoCard key={video.id} selectVideo={selectVideo} id={video.id} title={video.title} thumbnail={video.image} channel={video.channel}/>
             ))}
         </div>
         

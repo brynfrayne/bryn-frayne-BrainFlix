@@ -1,0 +1,11 @@
+
+@use "../../Styles/Partials/colors" as*;
+
+.video-list {
+
+&__subtitle {
+    color:$Silver;
+    font-size:1rem;
+    font-weight:500;
+}
+}

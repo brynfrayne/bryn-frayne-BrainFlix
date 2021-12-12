@@ -1,5 +1,6 @@
-@use "../Partials/Colors.scss" as*;
-@use "../Partials/Mixins.scss" as*;
+
+@use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 .search {
     position:relative;
@@ -12,15 +13,15 @@
 
     &__input {
         padding: .75rem;
-        padding-left:2rem;
+        padding-left:2.5rem;
         width:100%;
         border: 1px solid $Mercury;
         border-radius: 4px;
     }
 
     &__svg {
-        left:.5rem;
+        left:1rem;
         position:absolute;
-        top:33%;
+        top:25%;
     }
 }

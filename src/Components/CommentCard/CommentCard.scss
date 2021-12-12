@@ -1,7 +1,7 @@
-@use "../Partials/Colors.scss" as*;
+
+@use "../../Styles/Partials/colors" as*;
 
 .comment-card{
-margin:1rem;    
 border-bottom: 1px solid $Mercury;
 display: flex;
 

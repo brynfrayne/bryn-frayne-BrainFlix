@@ -2,6 +2,8 @@ import BrainFlixLogo from '../../Assets/Logo/BrainFlix-logo.svg';
 import Search from "../Search/Search";
 import "./Header.scss";
 import Button from "../Button/Button";
+import uploadIcon from "../../Assets/Icons/upload.svg";
+
 
 
 function Header() {
@@ -16,7 +18,7 @@ function Header() {
                 <div className="header__avatar-left"></div>
             </div>
             
-            <Button />
+            <Button icon={uploadIcon} buttonText={"UPLOAD"}/>
             <div className="header__avatar-right"></div>
         </header>
     )

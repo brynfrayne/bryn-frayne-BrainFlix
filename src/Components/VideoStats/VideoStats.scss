@@ -1,6 +1,30 @@
-@use "../Partials/Colors.scss" as*;
+
+@use "../../Styles/Partials/colors" as*;
 
 .video-stats {
     border-bottom: 1px solid $Mercury;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+&__channel-date {
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1rem;
+    color:$Silver;
+}
+    &__channel {
+    font-weight: 700;
+    color:$BrainFlix-Black;
+}
+&__likes-views {
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1rem;
+    color:$Silver;
+}
+&__views {
+    margin-bottom:1rem;
+}
 }

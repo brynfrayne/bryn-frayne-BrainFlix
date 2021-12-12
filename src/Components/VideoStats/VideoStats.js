@@ -7,22 +7,24 @@ export default function VideoStats(props) {
     return (
         <div className="video-stats">
              
-
-            <span>By {props.channel}</span>
-            {/* <span>{props.date}</span> *   ------ adjust date!!!!/}
+            <div className="video-stats__channel-date">
+                <span className="video-stats__channel">By {props.channel}</span>
+                <span>{props.date}</span>
+            </div>
 
             {/* <!-- View count component --> */}
-            <div>
-                <img src={Eyeball} alt="Eyeball" />
-                <span>{props.views}</span>
-            </div>
+            <div className="video-stats__likes-views">
+                <div className="video-stats__views">
+                    <img src={Eyeball} alt="Eyeball" />
+                    <span>{props.views}</span>
+                </div>
 
-            {/* <!-- Like count component --> */}
-            <div>
-                <img src={Heart} alt="Heart" />
-                <span>{props.likes}</span>
+                {/* <!-- Like count component --> */}
+                <div>
+                    <img src={Heart} alt="Heart" />
+                    <span>{props.likes}</span>
+                </div>
             </div>
-
 
         </div>
     )
