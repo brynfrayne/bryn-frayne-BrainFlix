@@ -40,15 +40,16 @@ export default class MainVideo extends Component {
     return (
         <div className="main-video">
             <Video videoImage={this.state.videos.image}/>
-            <div className="main-video__text">
-                <VideoTitle title={this.state.videos.title}/>
-                <VideoStats likes={this.state.videos.likes} views={this.state.videos.views} channel={this.state.videos.channel} date={formattedVideoDate}/>
-                <VideoDescription description={this.state.videos.description}/>
-                {/* <VideoCommentCounter commentCounter={this.state.videos.comments.length}/> */}
-                {/* Comment Section */}
-                <Comments commentCounter={this.state.videos.comments.length} commentsArray={this.state.videos.comments}/>
+            <div className="comment-video-wrapper">
+                <div className="main-video__text">
+                    <VideoTitle title={this.state.videos.title}/>
+                    <VideoStats likes={this.state.videos.likes} views={this.state.videos.views} channel={this.state.videos.channel} date={formattedVideoDate}/>
+                    <VideoDescription description={this.state.videos.description}/>
+                    <Comments commentCounter={this.state.videos.comments.length} commentsArray={this.state.videos.comments}/>
+                </div>
                 <VideoList videos={filteredVideoList} selectVideo={this.selectVideo}/>
             </div>
-        </div>
+            </div>
+        
     )
 }}

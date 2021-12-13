@@ -1,10 +1,11 @@
+import "./VideoTitle.scss";
 
 export default function VideoTitle(props) {
      
     
         return (
             <div>
-                <h1>{props.title}</h1>
+                <h1 className="video-title">{props.title}</h1>
             </div>
         )
     }

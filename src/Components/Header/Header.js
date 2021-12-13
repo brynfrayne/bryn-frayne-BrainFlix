@@ -12,14 +12,15 @@ function Header() {
         <header className="header">
 
             <img className="header__logo" src={BrainFlixLogo} alt="LOGO" />
-            
-            <div className="header__search-avatar-box">
-                <Search />
-                <div className="header__avatar-left"></div>
+            <div className="header__search-avatar-button-box">
+                <div className="header__search-avatar-box">
+                    <Search />
+                    <div className="header__avatar-left"></div>
+                </div>
+                
+                <Button icon={uploadIcon} buttonText={"UPLOAD"}/>
+                <div className="header__avatar-right"></div>
             </div>
-            
-            <Button icon={uploadIcon} buttonText={"UPLOAD"}/>
-            <div className="header__avatar-right"></div>
         </header>
     )
 };

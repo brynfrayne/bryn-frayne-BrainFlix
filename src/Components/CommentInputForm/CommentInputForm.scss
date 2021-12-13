@@ -10,8 +10,10 @@
         color:$Silver;
         margin:0.25rem;
         font-size: .875rem;
+        margin-left: 4.5rem;
+
         @include tablet {
-            margin-left:4.5rem;
+            margin-left:5rem;
         }
     }
     &__form {
@@ -19,7 +21,6 @@
         @include tablet {
             display: flex;
             align-items: center;
-            // justify-content: space-between; --- didnt doo anything initially
         }
     }
     &__textarea {
@@ -31,7 +32,6 @@
         font-size: 1rem;
         background-color: $Alabaster;
         border:1px solid $Mercury;
-        // color: $BrainFlix-Black; --- How do i change the placeholder text color to black????
         @include tablet {
             height:3rem;
             padding: 1rem;
@@ -60,5 +60,8 @@
         max-width: 48px;
         max-height: 48px;
         margin-top:1rem;
+    }
+    @include desktop {
+        margin: 2rem;
     }
 }

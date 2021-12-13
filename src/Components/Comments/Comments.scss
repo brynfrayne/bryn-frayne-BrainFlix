@@ -1,5 +1,12 @@
+@use "../../Styles/Partials/mixins" as*;
+
 .comment {
     &__counter {
         font-weight: 700;
+        @include desktop {
+            font-size: 1.25rem;
+            margin-bottom:2rem;
+
+        }
     }
 }

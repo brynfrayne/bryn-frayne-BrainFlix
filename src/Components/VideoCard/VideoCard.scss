@@ -6,6 +6,9 @@
   @include tablet {
     padding:.5rem 0;
   }
+  @include desktop {
+    margin: 1rem 0;
+  }
     &__button {
         width:fit-content;
         border: none;
@@ -23,7 +26,6 @@
       height:4rem;
       width: 6.5rem; 
       object-fit: cover;
-      // object-position: center; -- doesnt seem to do anything
       border-radius: .25rem;    
       @include tablet {
         height: 5rem;
@@ -32,18 +34,14 @@
   
     }
     &__text {
-      // overflow: hidden;
       width:55%;
       margin-left:1rem;
     }
     &__title {
-      // cant get ellipsis to show!!!!!!!!!!!!!!
       margin: 0;  
       font-weight: 700;
       width: 10rem;
-      height: 2rem; /* the element needs a fixed width (in px, em, %, etc) */
-      overflow: hidden; /* make sure it hides the content that overflows */
-      text-overflow: ellipsis;
+      height: 2rem; 
     }
     &__channel {
       margin-bottom: 0;

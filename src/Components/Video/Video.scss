@@ -1,4 +1,9 @@
+@use "../../Styles/Partials/mixins" as*;
+
 .video {
     width: 100%;
+    @include desktop {
+        height: 90vh;
+    }
     
 }

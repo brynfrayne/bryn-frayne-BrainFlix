@@ -1,4 +1,5 @@
 @use "../../Styles/Partials/mixins" as*;
+@use "../../Styles/Partials/colors" as*;
 
 .main-video {
     &__text {
@@ -6,5 +7,19 @@
         @include tablet {
             margin:2rem;
         }
+        @include desktop {
+            margin: 0rem 1.5rem 0rem 5rem;
+            border-right: 1px solid $Mercury;
+        }
+    }
+}
+.comment-video-wrapper {
+    @include tablet {
+        margin:2rem;
+    }
+    @include desktop {
+        display: flex;
+        
+
     }
 }
