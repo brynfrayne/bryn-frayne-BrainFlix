@@ -10,7 +10,6 @@ function Header() {
     return (
 
         <header className="header">
-
             <img className="header__logo" src={BrainFlixLogo} alt="LOGO" />
             <div className="header__search-avatar-button-box">
                 <div className="header__search-avatar-box">
