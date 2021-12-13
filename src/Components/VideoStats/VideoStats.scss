@@ -1,9 +1,8 @@
-
+@use "../../Styles/Partials/mixins" as*;
 @use "../../Styles/Partials/colors" as*;
 
 .video-stats {
     border-bottom: 1px solid $Mercury;
-    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
 &__channel-date {
@@ -12,10 +11,17 @@
     justify-content: space-between; 
     padding: 1rem;
     color:$Silver;
+    @include tablet {
+        flex-direction: row;
+        padding: 0;
+    }
 }
     &__channel {
     font-weight: 700;
     color:$BrainFlix-Black;
+    @include tablet {
+        margin-right:2rem;
+    }
 }
 &__likes-views {
     display:flex;
@@ -23,8 +29,15 @@
     justify-content: space-between; 
     padding: 1rem;
     color:$Silver;
+    @include tablet {
+        flex-direction: row;
+        padding: 0;
+    }
 }
 &__views {
     margin-bottom:1rem;
+    @include tablet {
+        margin-right:2rem;
+    }
 }
 }

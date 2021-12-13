@@ -7,7 +7,7 @@
     min-height:36px;
     box-shadow: 0;
     flex-grow: 1;
-    @include desktop {
+    @include tablet {
         flex-grow: 0;
     }
 
@@ -17,6 +17,9 @@
         width:100%;
         border: 1px solid $Mercury;
         border-radius: 4px;
+        @include tablet {
+            width: 16rem;
+        }
     }
 
     &__svg {

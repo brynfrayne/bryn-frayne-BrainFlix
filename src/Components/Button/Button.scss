@@ -12,6 +12,8 @@
     border-radius: 4px;
     @include tablet {
         width:65%;
+        margin:1rem;
+        margin-right: 0;
     }
     @include desktop {
         width:33%;
@@ -37,4 +39,7 @@
 
 .button-icon {
     position: relative;
+    @include tablet {
+        max-width: 2rem;
+    }
 }

@@ -6,14 +6,12 @@ import Button from '../Button/Button';
 export default function CommentInputForm(props) {
     return (
         <div className="comment-input">
-                <div className="avatar"></div>
+            <div className="avatar"></div>
 
-                    <div className="comment-input__form">
-                        <p className="comment-input__subtitle">JOIN THE CONVERSATION</p>
-                        <textarea className="comment-input__textarea" type="comment" placeholder="Add a new comment" />
-                        <Button icon={commentIcon} buttonText={"COMMENT"}/>
-    
-                    </div>
+            <div className="comment-input__form">
+                <textarea className="comment-input__textarea" type="comment" placeholder="Add a new comment" />
+                <Button icon={commentIcon} buttonText={"COMMENT"}/>
+            </div>
         </div>
     )
 }

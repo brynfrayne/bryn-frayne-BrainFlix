@@ -1,5 +1,6 @@
 
 @use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 .video-list {
 
@@ -7,5 +8,8 @@
     color:$Silver;
     font-size:1rem;
     font-weight:500;
+    @include tablet {
+        margin: 1.5rem 0;
+    }
 }
 }
