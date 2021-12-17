@@ -5,10 +5,7 @@ import "./Comments.scss";
 import * as uid from 'uniqid';
 
 export default function Comments({commentCounter, commentsArray}) {
-    // const commentDateMS = comment.timestamp;
-    // const commentDate = new Date(commentDateMS);
-    // const formattedCommentDate = (commentDate.getMonth() + 1) + "/" + (commentDate.getDate()) + "/" +  commentDate.getFullYear();
-    // date={comment.timestamp.toLocaleDateString()}
+    
      
     return (
         <div>
