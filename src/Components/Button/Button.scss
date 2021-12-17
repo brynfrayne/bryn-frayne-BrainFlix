@@ -4,11 +4,11 @@
 
 .button-container {
     display: flex;
-    background-color: $BrainFlix-Blue;
+    background-color: $Primary-CTA-color;
     margin:1rem 0;
     width:100%;
     padding:0 1rem;
-    color:$White;
+    color:$CTA-text-and-background;
     border-radius: 4px;
     @include tablet {
         width:10rem;
@@ -20,20 +20,20 @@
         margin:1.5rem;
     }
     &:hover {
-        background-color: $BrainFlix-DarkBlue;
+        background-color: $CTA-hover-state;
         cursor: pointer;
    }
 }
 .button {
     width:90%;
     padding: 1rem;
-    background-color: $BrainFlix-Blue;
-    color:$White;
+    background-color: $Primary-CTA-color;
+    color:$CTA-text-and-background;
     border:none;
     font-size: .875rem;
     font-weight: 700;
     &:hover {
-        background-color: $BrainFlix-DarkBlue;
+        background-color: $CTA-hover-state;
         cursor: pointer;
     }
 }

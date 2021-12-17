@@ -2,7 +2,7 @@
 @use "../../Styles/Partials/colors" as*;
 
 .video-stats {
-    border-bottom: 1px solid $Mercury;
+    border-bottom: 1px solid $Divider-line;
     display: flex;
     justify-content: space-between;
     @include desktop {
@@ -14,7 +14,7 @@
     flex-direction: column; 
     justify-content: space-between; 
     padding: 1rem;
-    color:$Silver;
+    color:$Secondary-text-color;
     @include tablet {
         flex-direction: row;
         padding: 0;
@@ -22,7 +22,7 @@
 }
     &__channel {
     font-weight: 700;
-    color:$BrainFlix-Black;
+    color:$Primary-text-color;
     @include tablet {
         margin-right:2rem;
     }
@@ -32,7 +32,7 @@
     flex-direction: column; 
     justify-content: space-between; 
     padding: 1rem;
-    color:$Silver;
+    color:$Light-Text;
     @include tablet {
         flex-direction: row;
         padding: 0;

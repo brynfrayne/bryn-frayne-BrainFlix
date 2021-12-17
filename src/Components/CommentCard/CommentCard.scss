@@ -2,11 +2,11 @@
 @use "../../Styles/Partials/colors" as*;
 
 .comment-card{
-border-bottom: 1px solid $Mercury;
+border-bottom: 1px solid $Divider-line;
 display: flex;
 
 &__avatar {
-background-color: $Mercury;
+background-color: $Avatar-Background;
 background-position: center;
 background-size: cover;
 border-radius: 50%;
@@ -41,7 +41,7 @@ margin:1rem;
     font-weight: 700;
 }
 &__date {
-    color: $Silver;
+    color: $Secondary-text-color;
 }
 
 &__comment {
