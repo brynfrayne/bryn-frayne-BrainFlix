@@ -1,7 +1,26 @@
 @use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 .upload-page {
     margin: 1rem;
+    @include tablet {
+        margin: 1rem 2rem;
+    }
+    @include desktop {
+        margin:1rem 6rem;
+    }
+    &__image-form-wrapper {
+        @include desktop {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__title {
+        @include tablet {
+           border-bottom: 1px solid $Divider-line;
+           padding: 1rem 0; 
+        }
+    }
     &__subtitle {
         margin-bottom: .5rem;
         font-weight: 700;
@@ -9,12 +28,26 @@
     }
     &__thumbnail {
         width: 100%;
-        height: 50vh;
         border-radius: .25rem;
+        @include tablet {
+            width: 50%;
+            height: 29.5vh;
+        }
+        @include desktop {
+            width: 100%;
+            margin-bottom: 1.25rem;
+        }
     }
     &__form {
         display: flex;
         flex-direction: column;
+        @include tablet {
+            padding-bottom: 1.5rem;
+        }
+        @include desktop {
+            flex-grow: 1;
+            margin-left: 1.25rem;
+        }
     }
     &__form-label {
         margin: 1rem 0 .5rem 0;
@@ -26,14 +59,26 @@
         border-radius: .25rem;
         padding: .5rem;
         background-color: $Formfield-background-color;
-        border:1px solid $Divider-line;
+        border: 1px solid $Divider-line;
         resize: none;
         &--description {
             height: 6rem;
+            @include desktop {
+                height: 12rem;
+            }
         }
         &::placeholder {
             color: $Primary-text-color;
             
+        }
+    }
+    &__button-wrapper {
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            border-top:1px solid $Divider-line;
         }
     }
 }
@@ -49,6 +94,9 @@
     font-weight: 700;
     display: flex;
     justify-content: center;
+    @include tablet {
+        width: fit-content;
+    }
     
     &:hover {
         background-color: $CTA-hover-state;
