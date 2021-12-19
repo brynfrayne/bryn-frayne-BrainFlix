@@ -4,10 +4,10 @@
 .comment-input {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $Mercury;
+    border-bottom: 1px solid $Divider-line;
     &__subtitle {
         font-weight: 700;
-        color:$Silver;
+        color:$Secondary-text-color;
         margin:0.25rem;
         font-size: .875rem;
         margin-left: 4.5rem;
@@ -30,14 +30,15 @@
         resize:none;
         border-radius: .25rem;
         font-size: 1rem;
-        background-color: $Alabaster;
-        border:1px solid $Mercury;
+        background-color: $Formfield-background-color;
+        border:1px solid $Divider-line;
         @include tablet {
             height:3rem;
             padding: 1rem;
+            overflow: hidden;
         }
         &::placeholder {
-            color:$BrainFlix-Black;
+            color:$Primary-text-color;
             font-size: 1rem;
             padding-bottom: .5rem;
         }
@@ -50,15 +51,15 @@
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    height:12vw;
-    max-height: 36px;
+    height:12vh;
+    max-height: 3rem;
     width:12vw;
-    max-width: 36px;
+    max-width: 3rem;
     margin: 1rem;
     margin-top:2rem;
     @include tablet {
-        max-width: 48px;
-        max-height: 48px;
+        max-width: 4rem;
+        max-height: 4rem;
         margin-top:1rem;
     }
     @include desktop {

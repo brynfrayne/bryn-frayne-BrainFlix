@@ -2,10 +2,10 @@ import React from 'react'
 import "./Video.scss"
 
 
-export default function Video(props) {
+export default function Video({videoImage}) {
     return (
         <div className="video">
-            <video poster={props.videoImage} className="video" controls></video>
+            <video poster={videoImage} className="video" controls></video>
         </div>
     )
 }

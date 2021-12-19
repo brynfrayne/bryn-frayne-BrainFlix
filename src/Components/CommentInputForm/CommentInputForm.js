@@ -10,7 +10,7 @@ export default function CommentInputForm(props) {
 
             <div className="comment-input__form">
                 <textarea className="comment-input__textarea" type="comment" placeholder="Add a new comment" />
-                <Button icon={commentIcon} buttonText={"COMMENT"}/>
+                <Button icon={commentIcon} buttonText={"COMMENT"} buttonUrl={'/:videoId'}/>
             </div>
         </div>
     )

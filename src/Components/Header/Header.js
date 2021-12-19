@@ -17,7 +17,7 @@ function Header() {
                     <div className="header__avatar-left"></div>
                 </div>
                 
-                <Button icon={uploadIcon} buttonText={"UPLOAD"}/>
+                <Button icon={uploadIcon} buttonText={"UPLOAD"} buttonUrl={'/upload'}/>
                 <div className="header__avatar-right"></div>
             </div>
         </header>

@@ -1,5 +1,5 @@
-@use "../../Styles/Partials/mixins" as*;
 @use "../../Styles/Partials/colors" as*;
+@use "../../Styles/Partials/mixins" as*;
 
 .main-video {
     &__text {
@@ -9,7 +9,7 @@
         }
         @include desktop {
             margin: 0rem 1.5rem 0rem 5rem;
-            border-right: 1px solid $Mercury;
+            border-right: 1px solid $Divider-line;
         }
     }
 }

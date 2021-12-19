@@ -1,4 +1,5 @@
 @use "../../Styles/Partials/mixins" as*;
+@use "../../Styles/Partials/colors" as*;
 
 .video-description {
     line-height: 1.375rem;
@@ -8,5 +9,55 @@
         margin: 2.5rem 0;
         margin-right: 1.5rem;
         line-height: 1.75rem;
+    }
+}
+
+.video-stats {
+    border-bottom: 1px solid $Divider-line;
+    display: flex;
+    justify-content: space-between;
+    @include desktop {
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+    }
+&__channel-date {
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1rem;
+    color:$Secondary-text-color;
+    @include tablet {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+    &__channel {
+    font-weight: 700;
+    color:$Primary-text-color;
+    @include tablet {
+        margin-right:2rem;
+    }
+}
+&__likes-views {
+    display:flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1rem;
+    color:$Light-Text;
+    @include tablet {
+        flex-direction: row;
+        padding: 0;
+    }
+}
+&__views {
+    margin-bottom:1rem;
+    @include tablet {
+        margin-right:2rem;
+    }
+}
+}
+.video-title {
+    @include desktop {
+        font-size: 2.75rem;
     }
 }
