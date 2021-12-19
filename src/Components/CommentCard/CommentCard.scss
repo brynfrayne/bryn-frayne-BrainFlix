@@ -10,14 +10,14 @@ background-color: $Avatar-Background;
 background-position: center;
 background-size: cover;
 border-radius: 50%;
-height:12vw;
-max-height: 36px;
+height:12vh;
+max-height: 3rem;
 width:12vw;
-max-width: 36px;
+max-width: 3rem;
 margin:1rem;
 @include tablet {
-    max-width: 48px;
-    max-height: 48px;
+    max-width: 4rem;
+    max-height: 4rem;
     margin-top:1rem;
 }
 @include desktop {

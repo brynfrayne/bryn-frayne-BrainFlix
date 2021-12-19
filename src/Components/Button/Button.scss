@@ -9,7 +9,7 @@
     width:100%;
     padding:0 1rem;
     color:$CTA-text-and-background;
-    border-radius: 4px;
+    border-radius: .25rem;
     @include tablet {
         width:10rem;
         margin:1rem;
@@ -35,6 +35,12 @@
     &:hover {
         background-color: $CTA-hover-state;
         cursor: pointer;
+    }
+    &__text {
+    padding: 1rem;
+    padding-right: 2.5rem;
+    margin: auto; 
+    font-weight: 700;   
     }
 }
 

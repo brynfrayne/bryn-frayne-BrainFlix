@@ -1,7 +1,10 @@
 @use "../../Styles/Partials/mixins" as*;
+@use "../../Styles/Partials/colors" as*;
 
 .video {
-    width: 100%;
+    width:100%;
+    background-color: $Video-background;
+    max-height: 75vh;
     @include desktop {
         height: 90vh;
     }

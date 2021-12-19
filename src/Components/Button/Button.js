@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import "../Button/Button.scss";
 
-function Button({icon,buttonText}) {
+function Button({icon,buttonText, buttonUrl}) {
     return (
-        <div className="button-container">
+        <Link to={buttonUrl} className="button-container">
             <img className="button-icon" src={icon} alt=""/>
-            <button className="button">{buttonText}</button>
-        </div>  
+            <span className="button__text">{buttonText}</span>
+        </Link>  
         
     )
 }

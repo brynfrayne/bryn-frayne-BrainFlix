@@ -10,7 +10,6 @@ export default function CommentCard({name, comment,date}) {
             <div className="comment-card__text-box">
                 <div className="comment-card__title-box">
                     <p className="comment-card__name">{name}</p>
-                    {/* MAke sure to set appropriate date!!!! */}
                     <p className="comment-card__date">{date}</p>
                 </div>
 
