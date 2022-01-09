@@ -49,7 +49,26 @@ app.get('/:id', (req, res) => {
     res.send(id);
 })
 
+app.post('/',(req,res)=> {
+      // Make a new note with a unique ID
+      const newVideo = {
+        id: uniqid(),
+        title: req.body.title,
+        description: req.body.description
+        // image: ''
+    };
 
+    // Insert that note into our data...
+    // 1. Read the current notes array
+    // 2. Add to the notes array
+    // 3. Write the entire new notes array to the file
+    const videos = readVideos();
+    videos.push(newVideo);
+    fs.writeFileSync('./data/videos.json', JSON.stringify(videos));
+
+    // Respond with the note that was created
+    res.status(201).json(newVideo);
+})
 
 
 // Start the server
