@@ -10,27 +10,17 @@ import axios from 'axios';
 export default class VideoUploadPage extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
-    console.log(event.target.value)
+        if (!event.target.title.value || !event.target.description.value) {
+            return alert("Please add a title and description!");
+        }
         axios.post('http://localhost:8000/', {
           title: event.target.title.value,
           description: event.target.description.value
+        }).then(response => {
+            alert('Video Succesfully Uploaded!')
+        }).then(response => {
+            this.props.history.push('/');
         })
-          .then((response) => {
-              console.log(response.data)
-                axios.get('http://localhost:8000')
-                    .then(response => {
-                        console.log(response.data)
-                    })
-        //     // Would be nice to refactor this into a function since we're re-using it
-        //       axios.get(process.env.REACT_APP_API_URL + '/trees')
-        //         .then((response) => {
-        //           this.setState({
-        //             trees: response.data
-        //           })
-                });
-        //   });
-    
-    
       };
     
     render() {

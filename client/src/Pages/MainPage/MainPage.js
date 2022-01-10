@@ -71,9 +71,9 @@ export default class MainPage extends Component {
     render(){
     
     if (!this.state.videos.comments) {
-        return <p>Video loading...</p>
+        return <p>Video loading...</p>;
     }    
-console.log(this.state.videos.comments)
+
     const filteredVideoList = this.state.videoList.filter((video) => video.id !== this.state.videos.id);
     
     return (

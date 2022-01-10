@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const fs = require('fs');
-const uniqid = require('uniqid');
-app.use(express.static('public'));
+const videos = require('./routes/videos');
 
 // Configuration
 require('dotenv').config();
@@ -12,64 +10,8 @@ const port = process.env.PORT || 8000;
 // Middleware
 app.use(express.json());
 app.use(cors());
-
-
-// Function to read trees data
-function readVideos() {
-    const videosFile = fs.readFileSync('./data/videos.json');
-    const videosData = JSON.parse(videosFile);
-    return videosData;
-}
-
-
-// Routes
-
-// GET / route
-app.get('/', (req, res) => {
-    res.send(readVideos());
-    //  // 1. Read the trees data
-    // const videosData = readVideos();
-
-    // // 2. Strip down the trees data
-    // const strippedData = videosData.map((video) => {
-    //     const newVideo = {};
-
-    //     newVideo.id = video.id;
-    //     newVideo.title = video.title;
-
-    //     return newVideo;
-    // });
-    // console.log(strippedData);
-    // // 3. Respond with the stripped down data
-    // res.json(strippedData);
-});
-
-app.get('/:id', (req, res) => {
-    const id = req.params.id;
-    res.send(id);
-})
-
-app.post('/',(req,res)=> {
-      // Make a new note with a unique ID
-      const newVideo = {
-        id: uniqid(),
-        title: req.body.title,
-        description: req.body.description
-        // image: ''
-    };
-
-    // Insert that note into our data...
-    // 1. Read the current notes array
-    // 2. Add to the notes array
-    // 3. Write the entire new notes array to the file
-    const videos = readVideos();
-    videos.push(newVideo);
-    fs.writeFileSync('./data/videos.json', JSON.stringify(videos));
-
-    // Respond with the note that was created
-    res.status(201).json(newVideo);
-})
-
+app.use(express.static('public'));
+app.use('/', videos);
 
 // Start the server
 app.listen(port, () => {
